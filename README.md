@@ -1,14 +1,8 @@
-# wifi-discovery-local-network-audit
-Windows Wi-Fi discovery and authorized local network auditing tool
 # 🛡️ Wi-Fi Discovery & Local Network Audit
-
-<p align="center">
 
 **Windows Wi-Fi Discovery • Local Network Enumeration • Authorized Security Auditing**
 
 A Python-based cybersecurity learning project for discovering nearby Wi-Fi networks and analyzing the local network in an authorized environment.
-
-</p>
 
 ---
 
@@ -27,11 +21,11 @@ This project is intended for:
 
 Only scan networks and systems that you **own or have explicit permission to assess**.
 
-Do **not** use this project to access, disrupt, intercept, or attack networks without authorization.
+Do not use this project to access, disrupt, intercept, or attack networks without authorization.
 
 ---
 
-# 📡 Project Overview
+# 📖 Overview
 
 **Wi-Fi Discovery & Local Network Audit** is a Python-based Windows cybersecurity project designed to help students, security researchers, and network administrators understand Wi-Fi visibility and local-network discovery.
 
@@ -55,7 +49,7 @@ The project combines Python automation with native Windows networking commands t
 
 ## 📡 Wi-Fi Discovery
 
-The Windows Wi-Fi module uses the native Windows WLAN interface to discover visible wireless networks.
+Discover and inspect Wi-Fi information available to the local Windows system.
 
 Information can include:
 
@@ -67,7 +61,12 @@ Information can include:
 - Authentication
 - Encryption
 
-The scanner performs multiple discovery rounds and combines observed BSSIDs to reduce temporary scan misses.
+Useful for:
+
+- Wi-Fi visibility
+- Network identification
+- Security-learning exercises
+- Local network troubleshooting
 
 ---
 
@@ -85,8 +84,6 @@ Information can include:
 - Local devices
 - Hostnames when available
 
-The local-network scanner is intentionally bounded and uses simple discovery techniques suitable for a controlled lab environment.
-
 ---
 
 ## 🖥️ Windows Security Lab GUI
@@ -100,7 +97,7 @@ Available operations include:
 - **Current Wi-Fi**
 - **Clear**
 
-The GUI is implemented with Python's Tkinter framework and runs Windows networking commands such as `netsh`, `ipconfig`, `arp`, `ping`, and `getmac`. :contentReference[oaicite:2]{index=2}
+The application is designed for authorized local-network security testing and educational laboratory use.
 
 ---
 
@@ -117,6 +114,7 @@ The laboratory focus includes:
 - Security auditing concepts
 - Python automation
 - Security-tool development
+- Defensive security concepts
 
 ---
 
@@ -128,14 +126,14 @@ flowchart LR
     A["📡 Wi-Fi Environment<br/>Access Points<br/>Visible Networks"]
     B["🌐 Local Network<br/>Hosts / IPs<br/>Gateway / Devices"]
 
-    C["🐍 Python Application"]
+    C["🐍 Python Security Application"]
 
     D["📶 Wi-Fi Discovery<br/>Windows WLAN"]
     E["🖥️ Local Network Discovery<br/>IPv4 / ARP / Ping"]
-    F["🔎 Current Wi-Fi Information"]
+    F["📶 Current Wi-Fi Information"]
 
     G["⚙️ Processing & Analysis"]
-    H["📋 Results & Reports"]
+    H["📋 Results & Reporting"]
     I["🛡️ Authorized Security Review"]
 
     A --> D
@@ -152,7 +150,9 @@ flowchart LR
     I --> H
 ```
 
-### Architecture Layers
+---
+
+# 🧱 Architecture Layers
 
 | Layer | Purpose |
 |---|---|
@@ -297,9 +297,9 @@ wifi-discovery-local-network-audit/
 
 ## `wifi_authorized_audit.py`
 
-Main Wi-Fi and local-network auditing functionality.
+Wi-Fi and local-network auditing functionality.
 
-Typical learning areas:
+Learning areas include:
 
 - Wi-Fi discovery
 - Local network information
@@ -310,7 +310,7 @@ Typical learning areas:
 
 ## `kali_security_lab.py`
 
-Security-lab functionality designed for controlled cybersecurity experimentation.
+Security-lab functionality for controlled cybersecurity experimentation.
 
 ---
 
@@ -318,7 +318,7 @@ Security-lab functionality designed for controlled cybersecurity experimentation
 
 Windows-oriented security-lab implementation.
 
-The Windows GUI provides controls for:
+The application provides a graphical interface with functions such as:
 
 ```text
 Scan Nearby Wi-Fi
@@ -326,8 +326,6 @@ Scan My Network
 Current Wi-Fi
 Clear
 ```
-
-The application displays Windows WLAN and local-network information through a graphical interface. :contentReference[oaicite:3]{index=3}
 
 ---
 
@@ -381,7 +379,7 @@ Enter the project directory:
 cd wifi-discovery-local-network-audit
 ```
 
-Check the files:
+Check the project files:
 
 ```powershell
 dir
@@ -391,7 +389,7 @@ dir
 
 # ▶️ Running the Project
 
-## Windows Security Lab
+## 🖥️ Windows Security Lab
 
 Run:
 
@@ -404,8 +402,6 @@ or:
 ```powershell
 py kali_security_lab_windows.py
 ```
-
-The GUI should open.
 
 ---
 
@@ -437,13 +433,13 @@ Run:
 python wifi_handshake_lab.py
 ```
 
-> Use the laboratory functionality only in an isolated or explicitly authorized environment.
+> Use laboratory functionality only in an isolated or explicitly authorized environment.
 
 ---
 
-# 🖥️ Windows Commands Used
+# 🖥️ Windows Networking Commands
 
-The Windows implementation relies on built-in networking utilities rather than requiring a large third-party dependency stack.
+The Windows implementation uses native Windows networking utilities.
 
 ### Wi-Fi interface information
 
@@ -481,11 +477,11 @@ ping <IP_ADDRESS>
 getmac
 ```
 
-These commands are used by the Windows application to collect and organize information for the authorized local-network lab. :contentReference[oaicite:4]{index=4} :contentReference[oaicite:5]{index=5}
-
 ---
 
 # 📊 Information Flow
+
+## Wi-Fi Discovery
 
 ```text
 Wi-Fi Adapter
@@ -510,7 +506,9 @@ Python Parser
 Security-Lab Output
 ```
 
-Local-network discovery:
+---
+
+## Local Network Discovery
 
 ```text
 Windows Network
@@ -530,7 +528,7 @@ ARP Table
       │
       ├── IP
       ├── MAC
-      └── Device Type
+      └── Device
       │
       ▼
 Hostname Resolution
@@ -543,9 +541,7 @@ Audit Results
 
 # 🔐 Security Design
 
-This project intentionally focuses on **discovery and authorized auditing**.
-
-The Windows GUI explicitly describes itself as an authorized local-network auditing tool and states that it does not perform deauthentication, credential capture, or password cracking. :contentReference[oaicite:6]{index=6}
+This project focuses on **discovery, enumeration, and authorized auditing**.
 
 ### The project does NOT provide:
 
@@ -558,8 +554,8 @@ The Windows GUI explicitly describes itself as an authorized local-network audit
 
 ### The project focuses on:
 
-- ✅ Discovery
-- ✅ Enumeration
+- ✅ Wi-Fi discovery
+- ✅ Network enumeration
 - ✅ Network visibility
 - ✅ Security education
 - ✅ Defensive analysis
@@ -579,7 +575,9 @@ Windows may temporarily miss networks because of:
 - Driver limitations
 - Environmental interference
 
-Likewise, ARP discovery does not guarantee that every device connected to a network will appear. Devices may be hidden by:
+ARP-based discovery also does not guarantee that every device connected to a network will appear.
+
+Possible reasons include:
 
 - Client isolation
 - Host firewalls
@@ -587,8 +585,6 @@ Likewise, ARP discovery does not guarantee that every device connected to a netw
 - Network configuration
 - VLAN boundaries
 - Other security controls
-
-The application itself notes these limitations when presenting local-network results. :contentReference[oaicite:7]{index=7}
 
 ---
 
@@ -627,158 +623,9 @@ The application itself notes these limitations when presenting local-network res
 
 ---
 
-# 📸 Project Screenshots
-
-Add your screenshots to a folder such as:
-
-```text
-docs/
-├── architecture.png
-├── workflow.png
-└── application.png
-```
-
-Then add them to this section:
-
-```markdown
-## 📸 Screenshots
-
-### 🖥️ Application
-
-![Wi-Fi Security Lab](docs/application.png)
-
-### 🏗️ Architecture
-
-![Architecture Diagram](docs/architecture.png)
-
-### 🔄 Workflow
-
-![Workflow Diagram](docs/workflow.png)
-```
-
----
-
-# 🧭 Learning Objectives
-
-This project can be used to practice:
-
-### Python
-
-- File organization
-- Functions and classes
-- Threading
-- Subprocess execution
-- Regular expressions
-- Network address processing
-- GUI development with Tkinter
-
-### Networking
-
-- SSID and BSSID
-- Wi-Fi channels
-- Signal strength
-- IPv4 addressing
-- Subnets
-- Default gateways
-- ARP
-- MAC addresses
-- Hostname resolution
-
-### Cybersecurity
-
-- Reconnaissance concepts
-- Network enumeration
-- Security auditing
-- Asset visibility
-- Defensive network analysis
-- Authorized penetration-testing methodology
-
----
-
-# 📚 Key Concepts
-
-| Concept | Description |
-|---|---|
-| **SSID** | Name of a wireless network |
-| **BSSID** | Identifier/MAC address associated with a Wi-Fi access point |
-| **RSSI** | Received signal-strength measurement |
-| **ARP** | Protocol used for IPv4 address-to-MAC resolution |
-| **Gateway** | Device that forwards traffic outside the local network |
-| **Subnet** | Defines the boundaries of an IP network |
-| **MAC Address** | Hardware/network interface identifier |
-| **Network Enumeration** | Collecting information about visible network assets |
-
----
-
-# 🛠️ Troubleshooting
-
-## Python is not recognized
-
-Try:
-
-```powershell
-py --version
-```
-
-If that works, use:
-
-```powershell
-py kali_security_lab_windows.py
-```
-
----
-
-## Wi-Fi scan returns no networks
-
-Check:
-
-```powershell
-netsh wlan show interfaces
-```
-
-Make sure the Windows Wi-Fi adapter is enabled.
-
-Then try:
-
-```powershell
-netsh wlan show networks mode=bssid
-```
-
----
-
-## Local network scan cannot determine the network
-
-Check:
-
-```powershell
-ipconfig
-```
-
-Confirm that the Wi-Fi adapter has:
-
-- IPv4 address
-- Subnet mask
-- Default gateway
-
----
-
-## No devices appear in the local scan
-
-Check:
-
-```powershell
-arp -a
-```
-
-Remember that ARP-based discovery does not guarantee visibility of every device on the network.
-
----
-
 # 🔒 `.gitignore`
 
-Sensitive or generated local files should not be committed.
-
-Recommended exclusions include:
+The project excludes sensitive and generated local files.
 
 ```gitignore
 # Python
@@ -809,21 +656,134 @@ settings.local.py
 
 ---
 
+# 📚 Learning Objectives
+
+## 🐍 Python
+
+- Functions and classes
+- Threading
+- Subprocess execution
+- Regular expressions
+- Network address processing
+- GUI development with Tkinter
+- Security automation
+
+## 🌐 Networking
+
+- SSID and BSSID
+- Wi-Fi channels
+- Signal strength
+- IPv4 addressing
+- Subnets
+- Default gateways
+- ARP
+- MAC addresses
+- Hostname resolution
+
+## 🛡️ Cybersecurity
+
+- Reconnaissance concepts
+- Network enumeration
+- Security auditing
+- Asset visibility
+- Defensive network analysis
+- Authorized penetration-testing methodology
+
+---
+
+# 📖 Key Concepts
+
+| Concept | Description |
+|---|---|
+| **SSID** | Name of a wireless network |
+| **BSSID** | Identifier associated with a Wi-Fi access point |
+| **RSSI** | Received signal-strength measurement |
+| **ARP** | Protocol used for IPv4 address-to-MAC resolution |
+| **Gateway** | Device that forwards traffic outside the local network |
+| **Subnet** | Defines the boundaries of an IP network |
+| **MAC Address** | Network interface identifier |
+| **Network Enumeration** | Collecting information about visible network assets |
+
+---
+
+# 🛠️ Troubleshooting
+
+## Python is not recognized
+
+Try:
+
+```powershell
+py --version
+```
+
+If that works:
+
+```powershell
+py kali_security_lab_windows.py
+```
+
+---
+
+## Wi-Fi scan returns no networks
+
+Check:
+
+```powershell
+netsh wlan show interfaces
+```
+
+Make sure the Windows Wi-Fi adapter is enabled.
+
+Then try:
+
+```powershell
+netsh wlan show networks mode=bssid
+```
+
+---
+
+## Local network scan cannot determine the network
+
+Run:
+
+```powershell
+ipconfig
+```
+
+Confirm that the Wi-Fi adapter has:
+
+- IPv4 address
+- Subnet mask
+- Default gateway
+
+---
+
+## No devices appear in the local scan
+
+Run:
+
+```powershell
+arp -a
+```
+
+Remember that ARP-based discovery does not guarantee visibility of every device on the network.
+
+---
+
 # 📈 Future Improvements
 
 Possible future development:
 
-- [ ] Export scan results to a safe report format
+- [ ] Export scan results to safe report formats
 - [ ] Add network-device categorization
 - [ ] Add vendor lookup for MAC addresses
 - [ ] Improve Wi-Fi signal visualization
 - [ ] Add scan history
-- [ ] Add structured JSON export for non-sensitive lab data
 - [ ] Add defensive security recommendations
 - [ ] Add unit tests
 - [ ] Add automated documentation
 - [ ] Improve cross-platform support
-- [ ] Add a dedicated laboratory mode
+- [ ] Add dedicated laboratory mode
 
 ---
 
@@ -843,16 +803,16 @@ GitHub
 
 ---
 
-# 📜 Project Philosophy
+# 🧭 Project Philosophy
 
 ```text
-DISCOVER
-   ↓
-ANALYZE
-   ↓
-AUDIT
-   ↓
-SECURE
+        DISCOVER
+            ↓
+         ANALYZE
+            ↓
+          AUDIT
+            ↓
+          SECURE
 ```
 
 The goal is not simply to scan networks.
@@ -882,7 +842,7 @@ If this project helps you learn Python, networking, or cybersecurity, consider g
 
 ---
 
-## 🛡️ Wi-Fi Discovery & Local Network Audit
+# 🛡️ Wi-Fi Discovery & Local Network Audit
 
 **Discover • Analyze • Audit • Secure**
 
