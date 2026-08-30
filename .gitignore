@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+.env
+.env.*
+*.key
+*.pem
+
+scan_results/
+*.log
+*.csv
+*.json
+
+config.local.py
+settings.local.py
