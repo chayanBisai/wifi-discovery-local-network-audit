@@ -6,6 +6,12 @@ A Python-based cybersecurity learning project for discovering nearby Wi-Fi netwo
 
 ---
 
+<p align="center">
+  <img src="images/poster.png" alt="Kali Wi-Fi Security Lab" width="900">
+</p>
+
+---
+
 ## ⚠️ Ethical Use & Legal Notice
 
 > **AUTHORIZED USE ONLY**
@@ -101,53 +107,50 @@ The application is designed for authorized local-network security testing and ed
 
 ---
 
-# 🧪 Cybersecurity Laboratory
+# 🏗️ Project Architecture
 
-This repository contains multiple scripts for practicing cybersecurity concepts in a controlled environment.
+The following diagram shows the overall architecture of the project.
 
-The laboratory focus includes:
+<p align="center">
+  <img src="images/architecture%20diargam.png" alt="Wi-Fi Discovery and Local Network Audit Architecture Diagram" width="1000">
+</p>
 
-- Wi-Fi discovery
-- Network enumeration
-- Local network analysis
-- Windows networking
-- Security auditing concepts
-- Python automation
-- Security-tool development
-- Defensive security concepts
+### Architecture Overview
 
----
-
-# 🏗️ Architecture Diagram
-
-```mermaid
-flowchart LR
-
-    A["📡 Wi-Fi Environment<br/>Access Points<br/>Visible Networks"]
-    B["🌐 Local Network<br/>Hosts / IPs<br/>Gateway / Devices"]
-
-    C["🐍 Python Security Application"]
-
-    D["📶 Wi-Fi Discovery<br/>Windows WLAN"]
-    E["🖥️ Local Network Discovery<br/>IPv4 / ARP / Ping"]
-    F["📶 Current Wi-Fi Information"]
-
-    G["⚙️ Processing & Analysis"]
-    H["📋 Results & Reporting"]
-    I["🛡️ Authorized Security Review"]
-
-    A --> D
-    B --> E
-
-    D --> C
-    E --> C
-    F --> C
-
-    C --> G
-    G --> H
-    H --> I
-
-    I --> H
+```text
+┌─────────────────────────┐
+│     Wi-Fi Environment   │
+│ Access Points / SSIDs   │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│   Wi-Fi Discovery       │
+│   Windows WLAN / netsh  │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│   Python Security Lab   │
+│   Discovery & Analysis  │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│ Processing & Analysis   │
+│ Parse / Organize Data   │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│ Results & Reporting     │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│ Authorized Security     │
+│ Review                  │
+└─────────────────────────┘
 ```
 
 ---
@@ -167,57 +170,15 @@ flowchart LR
 
 # 🔄 Workflow Diagram
 
-```mermaid
-flowchart TD
+The complete workflow of the project is shown below.
 
-    START(["▶ Start"])
-
-    A["1️⃣ Initialize Application"]
-    B["2️⃣ Check Windows Network Interface"]
-    C{"Select Operation"}
-
-    D["📡 Scan Nearby Wi-Fi"]
-    E["🌐 Scan My Local Network"]
-    F["📶 Show Current Wi-Fi"]
-
-    G["Run Windows WLAN Discovery"]
-    H["Read Local IPv4 Configuration"]
-    I["Read ARP Table"]
-    J["Read Current WLAN Information"]
-
-    K["🔎 Parse Results"]
-    L["📊 Organize Network Information"]
-    M["🛡️ Authorized Security Review"]
-    N["📋 Display Results"]
-
-    END(["■ Finish"])
-
-    START --> A
-    A --> B
-    B --> C
-
-    C --> D
-    C --> E
-    C --> F
-
-    D --> G
-    E --> H
-    H --> I
-    F --> J
-
-    G --> K
-    I --> K
-    J --> K
-
-    K --> L
-    L --> M
-    M --> N
-    N --> END
-```
+<p align="center">
+  <img src="images/workflow%20diagram.png" alt="Wi-Fi Discovery and Local Network Audit Workflow Diagram" width="1100">
+</p>
 
 ---
 
-# 🔬 Detailed Workflow
+# 🔬 Project Workflow
 
 ```text
 ┌──────────────────────┐
@@ -241,18 +202,18 @@ flowchart TD
      │ Select Action │
      └───────┬───────┘
              │
-     ┌───────┼────────┐
-     │       │        │
-     ▼       ▼        ▼
-  Wi-Fi    Local    Current
-  Scan     Network   Wi-Fi
-     │       │        │
-     ▼       ▼        ▼
-  netsh   ipconfig   netsh
-     │     arp       wlan
-     │     ping      interfaces
-     │       │        │
-     └───────┼────────┘
+      ┌──────┼────────┐
+      │      │        │
+      ▼      ▼        ▼
+   Wi-Fi    Local    Current
+   Scan    Network    Wi-Fi
+      │      │        │
+      ▼      ▼        ▼
+    netsh  ipconfig   netsh
+      │      arp      wlan
+      │      ping     interfaces
+      │      │        │
+      └──────┼────────┘
              │
              ▼
      ┌────────────────┐
@@ -277,6 +238,23 @@ flowchart TD
 
 ---
 
+# 🧪 Cybersecurity Laboratory
+
+This repository contains multiple scripts for practicing cybersecurity concepts in a controlled environment.
+
+The laboratory focus includes:
+
+- Wi-Fi discovery
+- Network enumeration
+- Local network analysis
+- Windows networking
+- Security auditing concepts
+- Python automation
+- Security-tool development
+- Defensive security concepts
+
+---
+
 # 📂 Project Structure
 
 ```text
@@ -288,8 +266,39 @@ wifi-discovery-local-network-audit/
 ├── 🐍 kali_security_lab.py
 ├── 🪟 kali_security_lab_windows.py
 ├── 📡 wifi_authorized_audit.py
-└── 📶 wifi_handshake_lab.py
+├── 📶 wifi_handshake_lab.py
+│
+└── 📁 images/
+    ├── architecture diargam.png
+    ├── workflow diagram.png
+    └── poster.png
 ```
+
+---
+
+# 🖼️ Project Visuals
+
+## 🛡️ Kali Wi-Fi Security Lab
+
+<p align="center">
+  <img src="images/poster.png" alt="Kali Wi-Fi Security Lab Poster" width="900">
+</p>
+
+---
+
+## 🏗️ Architecture
+
+<p align="center">
+  <img src="images/architecture%20diargam.png" alt="Project Architecture Diagram" width="1000">
+</p>
+
+---
+
+## 🔄 Workflow
+
+<p align="center">
+  <img src="images/workflow%20diagram.png" alt="Project Workflow Diagram" width="1100">
+</p>
 
 ---
 
