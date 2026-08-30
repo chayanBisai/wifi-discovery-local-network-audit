@@ -7,7 +7,7 @@ A Python-based cybersecurity learning project for discovering nearby Wi-Fi netwo
 ---
 
 <p align="center">
-  <img src="images/poster.png" alt="Kali Wi-Fi Security Lab" width="900">
+  <img src="images/poster.png" alt="Kali Wi-Fi Security Lab" width="500">
 </p>
 
 ---
