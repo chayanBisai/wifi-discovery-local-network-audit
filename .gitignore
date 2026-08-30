@@ -15,3 +15,5 @@ scan_results/
 
 config.local.py
 settings.local.py
+# Local password/lab file
+pass_10000000_lab.txt
