@@ -6,12 +6,6 @@ A Python-based cybersecurity learning project for discovering nearby Wi-Fi netwo
 
 ---
 
-<p align="center">
-  <img src="images/poster.png" alt="Kali Wi-Fi Security Lab" width="500">
-</p>
-
----
-
 ## ⚠️ Ethical Use & Legal Notice
 
 > **AUTHORIZED USE ONLY**
@@ -107,128 +101,6 @@ The application is designed for authorized local-network security testing and ed
 
 ---
 
-# 🏗️ Project Architecture
-
-The following diagram shows the overall architecture of the project.
-
-<p align="center">
-  <img src="images/architecture%20diargam.png" alt="Wi-Fi Discovery and Local Network Audit Architecture Diagram" width="1000">
-</p>
-
-## 🏗️ Architecture Diagram
-
-The following diagram shows the overall architecture of the project.
-
-```mermaid
-flowchart LR
-
-    A["📡 Wi-Fi Environment<br/>Access Points / SSIDs"]
-    B["🌐 Local Network<br/>Hosts / IPs / Devices"]
-
-    C["🐍 Python Security Application"]
-
-    D["📶 Wi-Fi Discovery"]
-    E["🔎 Local Network Discovery"]
-
-    F["⚙️ Processing & Analysis"]
-
-    G["📋 Results & Reporting"]
-
-    H["🛡️ Authorized Security Audit"]
-
-    A --> D
-    B --> E
-
-    D --> C
-    E --> C
-
-    C --> F
-    F --> G
-    G --> H
-
-# 🧱 Architecture Layers
-
-| Layer | Purpose |
-|---|---|
-| 📡 Target Environment | Wi-Fi networks and local network |
-| 🐍 Application Layer | Python scripts and GUI |
-| 📶 Discovery Layer | Wi-Fi and local-network discovery |
-| ⚙️ Processing Layer | Parse and organize network information |
-| 📋 Output Layer | Human-readable scan results |
-| 🛡️ Security Layer | Authorized security analysis |
-
----
-
-# 🔄 Workflow Diagram
-
-The complete workflow of the project is shown below.
-
-<p align="center">
-  <img src="images/workflow%20diagram.png" alt="Wi-Fi Discovery and Local Network Audit Workflow Diagram" width="1100">
-</p>
-
----
-
-# 🔬 Project Workflow
-
-```text
-┌──────────────────────┐
-│       START          │
-└──────────┬───────────┘
-           │
-           ▼
-┌──────────────────────┐
-│ Initialize Python    │
-│ Security Lab         │
-└──────────┬───────────┘
-           │
-           ▼
-┌──────────────────────┐
-│ Check Windows Wi-Fi  │
-│ Network Interface    │
-└──────────┬───────────┘
-           │
-           ▼
-     ┌───────────────┐
-     │ Select Action │
-     └───────┬───────┘
-             │
-      ┌──────┼────────┐
-      │      │        │
-      ▼      ▼        ▼
-   Wi-Fi    Local    Current
-   Scan    Network    Wi-Fi
-      │      │        │
-      ▼      ▼        ▼
-    netsh  ipconfig   netsh
-      │      arp      wlan
-      │      ping     interfaces
-      │      │        │
-      └──────┼────────┘
-             │
-             ▼
-     ┌────────────────┐
-     │ Parse Results  │
-     └───────┬────────┘
-             │
-             ▼
-     ┌────────────────┐
-     │ Analyze Data   │
-     └───────┬────────┘
-             │
-             ▼
-     ┌────────────────┐
-     │ Display Output │
-     └───────┬────────┘
-             │
-             ▼
-        ┌─────────┐
-        │  DONE   │
-        └─────────┘
-```
-
----
-
 # 🧪 Cybersecurity Laboratory
 
 This repository contains multiple scripts for practicing cybersecurity concepts in a controlled environment.
@@ -246,46 +118,192 @@ The laboratory focus includes:
 
 ---
 
-# 📂 Project Structure
+# 🏗️ Architecture Diagram
 
-```text
-wifi-discovery-local-network-audit/
-│
-├── 📄 README.md
-├── 📄 .gitignore
-│
-├── 🐍 kali_security_lab.py
-├── 🪟 kali_security_lab_windows.py
-├── 📡 wifi_authorized_audit.py
-├── 📶 wifi_handshake_lab.py
-│
-└── 📁 images/
-    ├── architecture diargam.png
-    ├── workflow diagram.png
-    └── poster.png
+The architecture below shows how the major components of the project interact, from the Wi-Fi and local network environment through discovery, processing, analysis, reporting, and security review.
+
+## Architecture Overview
+
+<p align="center">
+  <img src="images/architecture%20diargam.png"
+       alt="Wi-Fi Discovery and Local Network Audit Architecture Diagram"
+       width="1000">
+</p>
+
+### System Architecture
+
+```mermaid
+flowchart LR
+
+    A["Wi-Fi Environment<br/>Access Points / Visible Networks"]
+    B["Local Network<br/>Hosts / IPs / Gateway / Devices"]
+
+    C["Python Security Application"]
+
+    D["Wi-Fi Discovery<br/>Windows WLAN"]
+    E["Local Network Discovery<br/>IPv4 / ARP / Ping"]
+    F["Current Wi-Fi Information"]
+
+    G["Processing & Analysis"]
+    H["Results & Reporting"]
+    I["Authorized Security Review"]
+
+    A --> D
+    B --> E
+    F --> C
+
+    D --> C
+    E --> C
+
+    C --> G
+    G --> H
+    H --> I
 ```
 
 ---
 
-# 🖼️ Project Visuals
+## 🧱 Architecture Layers
+
+| Layer | Components | Purpose |
+|---|---|---|
+| Target Environment | Wi-Fi Networks, Local Network | Authorized environment being assessed |
+| Application Layer | Python Scripts, GUI | Provides the main application functionality |
+| Discovery Layer | Wi-Fi Discovery, Network Discovery | Identifies visible networks and local devices |
+| Data Layer | IPv4, ARP, WLAN Information | Collects network information |
+| Processing Layer | Parsing, Analysis | Organizes collected information |
+| Security Layer | Authorized Security Review | Supports defensive security analysis |
+| Output Layer | Results and Reports | Presents collected information |
 
 ---
 
-## 🏗️ Project Architecture
+# 🔄 Workflow Diagram
 
-The following architecture diagram shows how the Wi-Fi discovery and local network auditing components interact, from network discovery and data capture through processing, storage, reporting, and visualization.
+The workflow below shows the complete process used by the project.
 
-![Wi-Fi Discovery & Local Network Audit Architecture](images/architecture%20diargam.png)
+## Workflow Overview
+
+<p align="center">
+  <img src="images/workflow%20diagram.png"
+       alt="Wi-Fi Discovery and Local Network Audit Workflow Diagram"
+       width="1100">
+</p>
+
+### GitHub Workflow Diagram
+
+```mermaid
+flowchart TD
+
+    START(["Start"])
+
+    A["Initialize Application"]
+    B["Check Windows Network Interface"]
+    C{"Select Operation"}
+
+    D["Scan Nearby Wi-Fi"]
+    E["Scan Local Network"]
+    F["Show Current Wi-Fi"]
+
+    G["Windows WLAN Discovery"]
+    H["Read Local IPv4 Configuration"]
+    I["Read ARP Table"]
+    J["Read Current WLAN Information"]
+
+    K["Parse Results"]
+    L["Organize Network Information"]
+    M["Authorized Security Review"]
+    N["Display Results"]
+
+    END(["Finish"])
+
+    START --> A
+    A --> B
+    B --> C
+
+    C --> D
+    C --> E
+    C --> F
+
+    D --> G
+    E --> H
+    H --> I
+    F --> J
+
+    G --> K
+    I --> K
+    J --> K
+
+    K --> L
+    L --> M
+    M --> N
+    N --> END
+```
 
 ---
 
-## 🔄 Project Workflow
+# 🔬 Detailed Workflow
 
-The workflow below shows the complete process used by the project: initialization, Wi-Fi and local-network discovery, data collection, processing, security auditing, reporting, and visualization.
-
-![Wi-Fi Discovery & Local Network Audit Workflow](images/workflow%20diagram.png)
-
----
+```text
+┌──────────────────────────┐
+│          START           │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│   Initialize Python      │
+│       Security Lab       │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│ Check Windows Wi-Fi      │
+│ Network Interface        │
+└────────────┬─────────────┘
+             │
+             ▼
+      ┌───────────────┐
+      │ Select Action │
+      └───────┬───────┘
+              │
+       ┌──────┼───────┐
+       │      │       │
+       ▼      ▼       ▼
+    Wi-Fi   Local   Current
+    Scan    Network  Wi-Fi
+       │      │       │
+       ▼      ▼       ▼
+     WLAN   IPv4    WLAN
+   Discovery Config  Info
+       │      │       │
+       │      ▼       │
+       │     ARP      │
+       │     Table    │
+       └──────┼───────┘
+              │
+              ▼
+      ┌─────────────────┐
+      │  Parse Results  │
+      └────────┬────────┘
+               │
+               ▼
+      ┌─────────────────┐
+      │  Analyze Data   │
+      └────────┬────────┘
+               │
+               ▼
+      ┌─────────────────┐
+      │ Security Review │
+      └────────┬────────┘
+               │
+               ▼
+      ┌─────────────────┐
+      │ Display Results │
+      └────────┬────────┘
+               │
+               ▼
+        ┌─────────────┐
+        │    DONE     │
+        └─────────────┘
+```
 
 ---
 
@@ -333,6 +351,27 @@ Use only with networks and wireless equipment that you own or have explicit auth
 
 ---
 
+# 📂 Project Structure
+
+```text
+wifi-discovery-local-network-audit/
+│
+├── README.md
+├── .gitignore
+│
+├── kali_security_lab.py
+├── kali_security_lab_windows.py
+├── wifi_authorized_audit.py
+├── wifi_handshake_lab.py
+│
+└── images/
+    ├── architecture diargam.png
+    ├── workflow diagram.png
+    └── poster.png
+```
+
+---
+
 # 💻 Requirements
 
 ## Operating System
@@ -363,19 +402,19 @@ py --version
 
 # ⚙️ Installation
 
-Clone the repository:
+## 1. Clone the Repository
 
 ```powershell
 git clone https://github.com/chayanBisai/wifi-discovery-local-network-audit.git
 ```
 
-Enter the project directory:
+## 2. Enter the Project Directory
 
 ```powershell
 cd wifi-discovery-local-network-audit
 ```
 
-Check the project files:
+## 3. Check the Project Files
 
 ```powershell
 dir
@@ -437,37 +476,37 @@ python wifi_handshake_lab.py
 
 The Windows implementation uses native Windows networking utilities.
 
-### Wi-Fi interface information
+## Wi-Fi Interface Information
 
 ```powershell
 netsh wlan show interfaces
 ```
 
-### Nearby Wi-Fi networks
+## Nearby Wi-Fi Networks
 
 ```powershell
 netsh wlan show networks mode=bssid
 ```
 
-### IPv4 configuration
+## IPv4 Configuration
 
 ```powershell
 ipconfig
 ```
 
-### ARP table
+## ARP Table
 
 ```powershell
 arp -a
 ```
 
-### Host reachability
+## Host Reachability
 
 ```powershell
 ping <IP_ADDRESS>
 ```
 
-### Local MAC information
+## Local MAC Information
 
 ```powershell
 getmac
@@ -586,108 +625,31 @@ Possible reasons include:
 
 # 🧪 Example Laboratory Workflow
 
+A typical authorized laboratory session can follow this process:
+
 ```text
-1. Connect to your authorized Wi-Fi laboratory network
-                     │
-                     ▼
-2. Start the Windows Security Lab
-                     │
-                     ▼
-3. Select "Current Wi-Fi"
-                     │
-                     ▼
-4. Review connection information
-                     │
-                     ▼
-5. Select "Scan Nearby Wi-Fi"
-                     │
-                     ▼
-6. Review visible wireless networks
-                     │
-                     ▼
-7. Select "Scan My Network"
-                     │
-                     ▼
-8. Review local IPv4 and ARP information
-                     │
-                     ▼
-9. Analyze the results
-                     │
-                     ▼
-10. Document security observations
+1. Start the Python security application
+             ↓
+2. Check the Windows network interface
+             ↓
+3. Discover nearby Wi-Fi networks
+             ↓
+4. Inspect the local IPv4 configuration
+             ↓
+5. Review the local ARP table
+             ↓
+6. Parse and organize results
+             ↓
+7. Perform authorized security review
+             ↓
+8. Display findings
+             ↓
+9. Document observations
 ```
 
 ---
 
-# 🔒 `.gitignore`
-
-The project excludes sensitive and generated local files.
-
-```gitignore
-# Python
-__pycache__/
-*.pyc
-.venv/
-venv/
-
-# Secrets
-.env
-.env.*
-*.key
-*.pem
-
-# Local scan/output files
-pass_10000000_lab.txt
-scan_results/
-*.log
-*.csv
-*.json
-
-# Personal configuration
-config.local.py
-settings.local.py
-```
-
-> Never commit passwords, private keys, API tokens, captured credentials, or other sensitive data.
-
----
-
-# 📚 Learning Objectives
-
-## 🐍 Python
-
-- Functions and classes
-- Threading
-- Subprocess execution
-- Regular expressions
-- Network address processing
-- GUI development with Tkinter
-- Security automation
-
-## 🌐 Networking
-
-- SSID and BSSID
-- Wi-Fi channels
-- Signal strength
-- IPv4 addressing
-- Subnets
-- Default gateways
-- ARP
-- MAC addresses
-- Hostname resolution
-
-## 🛡️ Cybersecurity
-
-- Reconnaissance concepts
-- Network enumeration
-- Security auditing
-- Asset visibility
-- Defensive network analysis
-- Authorized penetration-testing methodology
-
----
-
-# 📖 Key Concepts
+# 🧠 Key Concepts
 
 | Concept | Description |
 |---|---|
@@ -702,17 +664,59 @@ settings.local.py
 
 ---
 
+# 🧰 Technologies
+
+## 🐍 Programming
+
+- Python 3
+- Tkinter
+- Python standard library
+
+## 🌐 Networking
+
+- Windows WLAN
+- `netsh`
+- IPv4
+- Subnets
+- ARP
+- MAC addresses
+- Hostname resolution
+- PowerShell
+
+## 🛡️ Cybersecurity
+
+- Reconnaissance concepts
+- Network enumeration
+- Security auditing
+- Asset visibility
+- Defensive network analysis
+- Authorized penetration-testing methodology
+
+## 🔧 Development
+
+- Git
+- GitHub
+- Windows PowerShell
+
+---
+
 # 🛠️ Troubleshooting
 
-## Python is not recognized
+## Python Is Not Recognized
 
-Try:
+Check:
+
+```powershell
+python --version
+```
+
+If that does not work, try:
 
 ```powershell
 py --version
 ```
 
-If that works:
+Then run:
 
 ```powershell
 py kali_security_lab_windows.py
@@ -720,7 +724,7 @@ py kali_security_lab_windows.py
 
 ---
 
-## Wi-Fi scan returns no networks
+## Wi-Fi Scan Returns No Networks
 
 Check:
 
@@ -738,7 +742,7 @@ netsh wlan show networks mode=bssid
 
 ---
 
-## Local network scan cannot determine the network
+## Local Network Scan Cannot Determine the Network
 
 Run:
 
@@ -754,7 +758,7 @@ Confirm that the Wi-Fi adapter has:
 
 ---
 
-## No devices appear in the local scan
+## No Devices Appear in the Local Scan
 
 Run:
 
@@ -783,23 +787,31 @@ Possible future development:
 
 ---
 
-# 🧑‍💻 Technologies
+# 📋 Example Output
+
+The project can provide information such as:
 
 ```text
-Python 3
-Tkinter
-Windows WLAN / netsh
-IPv4
-ARP
-PowerShell
-Windows Networking
-Git
-GitHub
+Wi-Fi Networks
+├── SSID
+├── BSSID
+├── Signal
+├── Channel
+├── Authentication
+└── Encryption
+
+Local Network
+├── Hostname
+├── IPv4 Address
+├── Subnet
+├── Default Gateway
+├── MAC Address
+└── Visible Devices
 ```
 
 ---
 
-# 🧭 Project Philosophy
+# 🔄 Project Philosophy
 
 ```text
         DISCOVER
@@ -829,6 +841,47 @@ Use this project only against:
 - Systems for which you have explicit authorization
 
 Unauthorized access or interference with computer systems and networks may be illegal.
+
+---
+
+# 🔒 Privacy
+
+Network information collected during testing may contain sensitive information such as:
+
+- IP addresses
+- MAC addresses
+- Hostnames
+- Wi-Fi network names
+- Network configuration information
+
+Do not publish sensitive network information in public repositories.
+
+Before sharing screenshots or reports, remove:
+
+- Personal IP addresses where appropriate
+- MAC addresses
+- Private hostnames
+- Network names if sensitive
+- Credentials or secrets
+- Other identifying information
+
+---
+
+# 📚 Learning Objectives
+
+By working with this project, you can practice:
+
+- Python programming
+- Windows networking
+- Wi-Fi discovery
+- IPv4 networking
+- ARP concepts
+- Network enumeration
+- Security auditing
+- Command-line automation
+- PowerShell
+- Git and GitHub
+- Cybersecurity laboratory methodology
 
 ---
 
