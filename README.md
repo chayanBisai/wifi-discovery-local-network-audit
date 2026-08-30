@@ -278,27 +278,23 @@ wifi-discovery-local-network-audit/
 
 # 🖼️ Project Visuals
 
-## 🛡️ Kali Wi-Fi Security Lab
+---
 
-<p align="center">
-  <img src="images/poster.png" alt="Kali Wi-Fi Security Lab Poster" width="900">
-</p>
+## 🏗️ Project Architecture
+
+The following architecture diagram shows how the Wi-Fi discovery and local network auditing components interact, from network discovery and data capture through processing, storage, reporting, and visualization.
+
+![Wi-Fi Discovery & Local Network Audit Architecture](images/architecture%20diargam.png)
 
 ---
 
-## 🏗️ Architecture
+## 🔄 Project Workflow
 
-<p align="center">
-  <img src="images/architecture%20diargam.png" alt="Project Architecture Diagram" width="1000">
-</p>
+The workflow below shows the complete process used by the project: initialization, Wi-Fi and local-network discovery, data collection, processing, security auditing, reporting, and visualization.
+
+![Wi-Fi Discovery & Local Network Audit Workflow](images/workflow%20diagram.png)
 
 ---
-
-## 🔄 Workflow
-
-<p align="center">
-  <img src="images/workflow%20diagram.png" alt="Project Workflow Diagram" width="1100">
-</p>
 
 ---
 
