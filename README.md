@@ -3,6 +3,11 @@
 **Windows Wi-Fi Discovery • Local Network Enumeration • Authorized Security Auditing**
 
 A Python-based cybersecurity learning project for discovering nearby Wi-Fi networks and analyzing the local network in an authorized environment.
+<p align="center">
+  <img src="images/poster.png" alt="Kali Wi-Fi Security Lab" width="900">
+</p>
+
+---
 
 ---
 
