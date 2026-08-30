@@ -115,45 +115,36 @@ The following diagram shows the overall architecture of the project.
   <img src="images/architecture%20diargam.png" alt="Wi-Fi Discovery and Local Network Audit Architecture Diagram" width="1000">
 </p>
 
-### Architecture Overview
+## 🏗️ Architecture Diagram
 
-```text
-┌─────────────────────────┐
-│     Wi-Fi Environment   │
-│ Access Points / SSIDs   │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│   Wi-Fi Discovery       │
-│   Windows WLAN / netsh  │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│   Python Security Lab   │
-│   Discovery & Analysis  │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│ Processing & Analysis   │
-│ Parse / Organize Data   │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│ Results & Reporting     │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│ Authorized Security     │
-│ Review                  │
-└─────────────────────────┘
-```
+The following diagram shows the overall architecture of the project.
 
----
+```mermaid
+flowchart LR
+
+    A["📡 Wi-Fi Environment<br/>Access Points / SSIDs"]
+    B["🌐 Local Network<br/>Hosts / IPs / Devices"]
+
+    C["🐍 Python Security Application"]
+
+    D["📶 Wi-Fi Discovery"]
+    E["🔎 Local Network Discovery"]
+
+    F["⚙️ Processing & Analysis"]
+
+    G["📋 Results & Reporting"]
+
+    H["🛡️ Authorized Security Audit"]
+
+    A --> D
+    B --> E
+
+    D --> C
+    E --> C
+
+    C --> F
+    F --> G
+    G --> H
 
 # 🧱 Architecture Layers
 
